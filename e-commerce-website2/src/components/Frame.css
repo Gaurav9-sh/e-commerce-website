@@ -1,0 +1,45 @@
+/* .frame{
+    position: relative;
+    border: 1px solid;
+    height: 25rem;
+    width: 92%;
+    top: 50rem;
+    left: 2rem;
+} */
+
+.boombox {
+    position: relative;
+    top: 50rem;
+    width: 91vw;
+    height: 500px;
+    color: white;
+    background-color: rgb(19, 18, 18);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    left: 1.5rem;
+}
+.boombox-right {
+    width: 568px;
+    height: 330px;
+    background-image: url('../images/boommm.png');
+    filter: drop-shadow(0 0 40px rgb(107, 103, 103));
+}
+
+.boombox-left p{
+    color: #0F6;
+    margin-left: 1.5rem;
+    font-family: poppins;
+}
+
+.boombox-left h1{
+    margin-left: 1rem;
+    font-family: poppins;
+}
+#buybtn {
+    background-color: #0F6;
+    border: none;
+    width: 8rem;
+    height: 3rem;
+    color: white;
+}

@@ -1,0 +1,13 @@
+.ourproducts{
+    position: relative;
+    top: 55rem;
+}
+
+#productssection{
+    overflow: visible;
+    gap: 4rem;
+}
+
+#productssection2{
+    gap: 4rem;
+}

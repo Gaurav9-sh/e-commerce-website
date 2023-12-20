@@ -1,0 +1,57 @@
+.card{
+
+    /* position: absolute; */
+    /* border: 1px solid; */
+    height: 60vh;
+    min-width: 20vw;
+    /* top: 40rem; */
+    left: 5rem;
+    border: none;
+}
+.cardImage{
+    border: 1px solid red;
+
+    /* border: 1px solid; */
+    height: 50vh;
+    min-width: 19vw;
+    left: 5rem;
+    border-radius: 4px;
+    border: none;
+}
+
+.cardImage img:hover{
+    transform: scale(1.5);
+}
+.cardImage img{
+    transition: all 1s;
+}
+.cardImage{
+    height: 36vh;
+    background-color: #F5F5F5;
+    text-align: center;
+    padding-top: 2rem;
+   
+}
+
+.specification{
+    display: flex;
+    column-gap: 2rem;
+}
+
+.cardImage img{
+    mix-blend-mode:multiply;
+
+}
+
+.sale{
+    position: relative;
+    height: 2rem;
+    width: 3rem;
+    border: none;
+    border-radius: 2px;
+    top: 2.3rem;
+    left: 0.3rem;
+    background-color: #BD4444;
+    color: whitesmoke;
+    text-align: center;
+}

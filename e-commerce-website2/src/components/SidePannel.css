@@ -1,0 +1,26 @@
+.sidepannel{
+    /* position: absolute; */
+    border-right: 2px solid;
+    border-color: grey;
+    height: 52vh;
+    width: 18vw;
+    left: 2.7rem;
+    top: 4rem;
+}
+
+.barList{
+    list-style: none;
+    font-family: poppins;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #000;
+}
+
+.barListitem{
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+.barListitem:hover{
+    color: #DB4444;
+}

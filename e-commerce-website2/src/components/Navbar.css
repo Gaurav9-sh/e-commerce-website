@@ -1,0 +1,30 @@
+
+#searchbox{
+    position: relative;
+    right: 100px;
+}
+
+#shoppingcart{
+    height: 2.2rem;
+    width: 3rem;
+}
+.navbar-brand{
+    margin-left: 1.2rem;
+}
+.nav-item{
+   font-family:poppins;
+   font-size: 18px;
+   font-weight: 400;
+   color: #000;
+}
+
+.navbar-nav{
+    gap: 2.5rem;
+    margin-left: 14rem;
+}
+
+.form-control{
+    width: 15rem;
+    text-align: left;
+    background-color: #F5F5F5;
+}

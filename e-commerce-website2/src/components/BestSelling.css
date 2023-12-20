@@ -1,0 +1,10 @@
+.bestSelling{
+    position: relative;
+    /* border: 1px solid; */
+    height: 10rem;
+    top: 25rem;
+}
+
+#sellingproduct{
+    gap: 4rem;
+}

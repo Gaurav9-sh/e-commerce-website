@@ -1,0 +1,18 @@
+.categoryBox{
+    border: 1px solid rgba(0, 0, 0, 0.30);
+    height: 24vh;
+    width: 12vw;
+    text-align: center;
+    padding: 25px 56px 24px 55px;
+    border-radius: 5px;
+    /* background-color: #DB4444; */
+}
+
+.categoryBox img{
+    mix-blend-mode: multiply;
+}
+.categoryBox:hover{
+    background-color: #DB4444;
+    cursor: pointer;
+    color: white;
+}

@@ -1,0 +1,55 @@
+.saleSection{
+    /* border: 1px solid; */
+    height: 33rem;
+    position: relative;
+    top: 10rem;
+    /* overflow: hidden; */
+}
+
+.writingSection{
+    /* border: 1px solid; */
+    padding-left: 1.7rem;
+}
+
+.heading4{
+    border-left: 15px solid;
+    padding-left: 1rem;
+    color: #DB4444;
+    font-family: poppins;
+}
+
+.heading1{
+    font-family: poppins;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.cardsSection{
+    position: relative;
+    /* border: 1px solid green; */
+    display: flex;
+    gap: 2rem; 
+    margin-left: -3rem;
+    overflow: hidden;
+}
+
+.slidingClass{
+    display: flex;
+}
+
+.buttonClass{
+    position: absolute;
+    right: 2rem;
+}
+
+.buttonClass button{
+    margin: 0.5rem;
+    border-radius: 20px;
+    border: none;
+    color: #DB4444;
+}
+
+#morebutton{
+    margin-left: 45%;
+    margin-top: 2rem;
+}

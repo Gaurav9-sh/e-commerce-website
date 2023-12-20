@@ -1,0 +1,26 @@
+.deliveryBox{
+    /* border: 1px solid red; */
+    height: 15rem;
+    width: 15rem;
+    text-align: center;
+    border-radius: 500px;
+    box-shadow: 2px 2px 5px;
+}
+
+.deliveryBox img{
+    height: 6rem;
+    transition: all 1s;
+}
+.deliveryBox img:hover{
+    transform: scale(1.2);
+}
+.deliveryBox h4{
+    font-size: 1rem;
+    font-family: poppins;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.delivery p{
+    font-size: 0.6rem;
+}
