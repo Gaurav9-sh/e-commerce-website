@@ -1,9 +1,10 @@
 .fastdelivery{
     position: relative;
     /* border: 1px solid; */
-    height: 20rem;
-    top: 65rem;
+    height: 22rem;
+    /* top: 65rem; */
     display: flex;
     gap: 5rem;
     justify-content: center;
+    margin-top: 5rem;
 }

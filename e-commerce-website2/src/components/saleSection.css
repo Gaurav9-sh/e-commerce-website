@@ -1,9 +1,10 @@
 .saleSection{
     /* border: 1px solid; */
-    height: 33rem;
+    height: 40rem;
     position: relative;
-    top: 10rem;
+    /* top: 10rem; */
     /* overflow: hidden; */
+    margin-top: 5rem;
 }
 
 .writingSection{

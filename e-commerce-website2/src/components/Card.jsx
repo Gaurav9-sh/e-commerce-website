@@ -1,10 +1,14 @@
 import React from 'react'
 import './Card.css'
 import Star from '../images/Star.jpg'
+import { Link } from 'react-router-dom'
 
 const Card = (props) => {
   return (
+  
+    
     <div className='card'>
+      <Link to="Product" style={{textDecoration:"none"}}>
       <div className="sale">-35%</div>
         <div className="cardImage">
             <img src={props.image}  alt="" />
@@ -20,9 +24,7 @@ const Card = (props) => {
           <img src={Star}  style = {{height: "1rem", width: "1rem"}} alt="" />
           <img src={Star}  style = {{height: "1rem", width: "1rem"}} alt="" />
         </div>
-        
-       
-
+        </Link>
     </div>
   )
 }

@@ -8,6 +8,8 @@ import image58 from "../images/image58.jpg"
 import image63 from "../images/image63.jpg"
 import icondelivery from "../images/icondelivery.jpg"
 import iconreturn from "../images/iconreturn.jpg"
+import OurProducts from "./OurProducts";
+import BestSelling from "./BestSelling";
 
 function Product() {
 
@@ -82,6 +84,7 @@ function Product() {
                 </div>
             </div>
         </div>
+        <BestSelling/>
 
 
         </>

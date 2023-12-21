@@ -1,6 +1,6 @@
 .deliveryBox{
     /* border: 1px solid red; */
-    height: 15rem;
+    height: 17rem;
     width: 15rem;
     text-align: center;
     border-radius: 500px;
@@ -10,6 +10,7 @@
 .deliveryBox img{
     height: 6rem;
     transition: all 1s;
+    margin-top: 2rem;
 }
 .deliveryBox img:hover{
     transform: scale(1.2);
