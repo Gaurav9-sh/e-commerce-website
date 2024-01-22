@@ -2,11 +2,12 @@
     position: absolute;
     /* height: 24rem;
     width: 30rem; */
-    width: 55vw;
+    width: 58vw;
     height: 50vh;
     /* border: 2px solid; */
     right: 120px;
-    top: 4rem;
+    margin-top: 3rem;
+    /* top: 4rem; */
 }
 
 .carousel-inner{

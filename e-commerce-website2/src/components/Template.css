@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html{
+    font-size: 100%;
+  }
+/* .Templatehead h1{
+    
+    text-align: center;
+    font-size: 3rem;
+    height: 5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} */
+
+.TemplateContainer{
+    /* text-align: center; */
+    /* justify-content: center; */
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 2px solid; */
+    margin-top: 2rem;
+    gap: 2rem;
+    position: relative;
+    
+   
+}
+
+.Templatehead{
+   /* border: 1px solid green; */
+   position: relative;
+   left: 5rem;
+   width: 74%;
+}
+
+#templateHeading{
+  display: inline-block;
+  border: 12px solid #DB4444;
+  padding-left: 10px;
+  border-bottom: none;
+  border-top: none;
+  border-right: none;
+  position: relative;
+  left: 5rem;
+}
+
+
+
+

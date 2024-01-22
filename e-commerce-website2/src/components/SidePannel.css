@@ -1,26 +1,44 @@
 .sidepannel{
     /* position: absolute; */
     border-right: 2px solid;
-    border-color: grey;
-    height: 52vh;
+    border-color: rgb(210, 200, 200);
+    height: 58vh;
     width: 18vw;
     left: 2.7rem;
-    top: 4rem;
+    /* margin-top: 1rem; */
+    padding-top: 2rem;
+    /* top: 4rem; */
 }
 
 .barList{
     list-style: none;
-    font-family: poppins;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-family: poppins; */
     font-weight: 400;
     font-size: 1.1rem;
     color: #000;
 }
+.sidelink{
+    color: #000;
+    text-decoration: none;
+}
 
+/* .sidelink:hover{
+    color: white;
+} */
 .barListitem{
+    text-align: center;
     margin-top: 0.5rem;
     cursor: pointer;
 }
 
 .barListitem:hover{
-    color: #DB4444;
+    background-color: #DB4444;
+    color: white;
+    border-radius: 10px;
+}
+
+.item-link{
+    text-decoration: none;
+    color: #000;
 }

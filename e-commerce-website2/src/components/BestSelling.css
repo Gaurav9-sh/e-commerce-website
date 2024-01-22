@@ -1,10 +1,17 @@
 .bestSelling{
     position: relative;
-    /* border: 1px solid; */
-    height: 10rem;
-    top: 25rem;
+    /* border: 1px solid green; */
+    height: 37rem;
+    /* top: 25rem; */
 }
 
 #sellingproduct{
     gap: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cardSection{
+    display: flex;
+    flex-wrap: wrap;
 }

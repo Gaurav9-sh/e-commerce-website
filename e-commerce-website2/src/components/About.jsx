@@ -4,7 +4,7 @@ import storypic from '../images/storypic.png'
 import Smallcomps from '../smallcomps/Smallcomps'
 import shoppingbag from "../images/shoppingbag.png"
 import iconSale from "../images/iconSale.png"
-import delivery from "../images/delivery.png"
+import delivery from "../images/icondelivery.jpg"
 import Group from "../images/Group.png"
 import bagg from "../images/bagg.png"
 import Crousel2 from '../smallcomps/crousel2'
@@ -74,7 +74,7 @@ function About() {
    
    <>
    <div className="top">
-    <div className="top-left">
+    <div className="top-left" data-aos="zoom-in" data-aos-duration="700">
       <div id="top-left-inner">
       <h2 className='hh2'>Our Story</h2>
       <p>

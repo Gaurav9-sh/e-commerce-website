@@ -9,7 +9,7 @@
 
 .boombox {
     position: relative;
-    top: 50rem;
+    /* top: 50rem; */
     width: 91vw;
     height: 500px;
     color: white;

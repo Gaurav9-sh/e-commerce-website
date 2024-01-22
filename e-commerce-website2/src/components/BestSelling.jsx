@@ -1,24 +1,47 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './BestSelling.css'
 import Card from './Card'
 import jacket from '../images/jacket.jpg'
 import bag from '../images/bag.jpg'
 import speaker from '../images/speaker.jpg'
 import cupboard from '../images/cupboard.jpg'
+import axios from 'axios'
+// import Products from './Data'
+
 const BestSelling = () => {
+  const[Products,setProducts] = useState([]);
+  
+
+  useEffect(()=>{
+    const fetchData = async () =>{
+      try{
+        const response = await axios.get('http://localhost:3000/api/products');
+        setProducts(response.data);
+      }
+      catch(err){
+        console.log(err);
+      }
+    }
+    fetchData();
+  })
+
   return (
     <div className='bestSelling'>
-        <div className="writingSection">
-          <h4 className='heading4'>This Month</h4>
-          <h1 className='heading1'>Best Selling Products</h1> 
-        </div>
+      <div className="writingSection" data-aos="fade-right">
+        <h4 className='heading4'>This Month</h4>
+        <h1 className='heading1'>Best Selling Products</h1>
+      </div>
 
-        <div className="cardsSection" id='sellingproduct'>
-            <Card image={jacket} title="The north coat" price="260" price2="360"/>
-            <Card image={bag} title="Gucci duffle bag" price="960" price2="1160"/>
-            <Card image={speaker} title="RGB iquid CPU Cooler" price="160" price2="170"/>
-            <Card image={cupboard} title="  Small BookSelf" price="360" price2="460"/>
-        </div>
+      <div className="cardsSection" id='sellingproduct'>
+
+        {
+          Products.slice(24, 28).map((ele) => {
+            return (
+              <Card id={ele.id} image={ele.image} price={ele.price} title={ele.title} />
+            )
+          })
+        }
+      </div>
     </div>
   )
 }
