@@ -20,8 +20,8 @@
 .nav-item{
    /* font-family:poppins; */
    font-size: 18px;
-   font-weight: 600;
-   color: #000;
+   font-weight: 500;
+   color: #6b6363;
 }
 
 
@@ -37,5 +37,8 @@
 }
 
 .active{
-   color: #DB4444 !important;
+   background-color: #DB4444;
+   /* color: #DB4444 !important; */
+   color: white !important;
+   border-radius: 11px;
 }

@@ -7,4 +7,11 @@
 
 #sellingproduct{
     gap: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cardSection{
+    display: flex;
+    flex-wrap: wrap;
 }

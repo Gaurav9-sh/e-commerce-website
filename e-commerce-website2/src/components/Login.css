@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.form{
+    display: flex;
+    /* border: 1px solid; */
+    position: relative;
+    top:15px;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+/* .loginimage{
+   position: relative;
+   border: 1px solid red;
+   height: 20vh;
+   width: 50%;
+} */
+
+.formimage img{
+    width: 100%;
+    height: 80vh;
+}
+
+.formcontent{
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    text-align: center;
+    margin-right: 60px;
+    margin-top: 80px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.formInputCont{
+   position: relative;
+   top: 25px;
+   height: 8rem;
+   /* border: 1px solid; */
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   padding-left: 20%;
+
+}
+.forminput{
+    width: 300px;
+    margin: 5px;
+    text-align: center;
+    height: 35px;
+    border: none;
+    background-color: #F5F5F5;
+}
+.forminput:focus{
+    outline: none;
+}
+.formbtn{
+    border: none;
+    background-color: #DB4444;
+    color: white;
+    width: 56%;
+    height: 40px;
+    border-radius: 5px;
+}
+
+
+.formheading{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 52px;
+}
+
+.formbtncont{
+    position: relative;
+    /* border: 1px solid; */
+    top: 22px;
+    
+}

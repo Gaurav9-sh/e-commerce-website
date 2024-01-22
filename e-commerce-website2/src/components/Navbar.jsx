@@ -1,10 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
 // import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { NavLink, Link } from 'react-router-dom';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import {useNavigate} from 'react-router-dom'
 
 const Navbar = () => {
+  const[searchQuerry, setSearchQuerry] = useState('');
+  const navigate = useNavigate();
+  
+  const handleOnChange=(e)=>{
+      setSearchQuerry(e.target.value);
+  }
+  const handleOnSubmit=(e)=>{
+    e.preventDefault();
+
+    if (searchQuerry.trim() !== '') {
+      
+      navigate(`/search?q=${encodeURIComponent(searchQuerry)}`);
+    }
+  }
   return (
     <div>
 
@@ -29,9 +44,8 @@ const Navbar = () => {
           <NavLink className="nav-link" aria-current="page" to="Signup">SignUp</NavLink>
         </li>
       </ul>
-      <form className="d-flex" role="search" id="searchbox">
-        <input className="form-control me-5" type="search" placeholder="What are you looking for?" aria-label="Search"/>
-         {/* <img src={ShoppingCartIcon} alt="" /> */}
+      <form className="d-flex" role="search" id="searchbox" onSubmit={handleOnSubmit}>
+        <input className="form-control me-5" type="search" placeholder="What are you looking for?" aria-label="Search" value={searchQuerry} onChange={handleOnChange}/>
          <ShoppingCartOutlinedIcon id="shoppingcart"/>
       </form>
     </div>

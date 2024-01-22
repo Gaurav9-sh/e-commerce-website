@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
 import './OurProducts.css'
 import Card from './Card'
 import camera2 from '../images/camera2.jpg'
@@ -9,24 +9,59 @@ import mercedes from '../images/mercedes.jpg'
 import sportsshoes from '../images/sportsshoes.jpg'
 import laptop from '../images/laptop.jpg'
 import  bag from '../images/bag.jpg'
+import axios from 'axios'
+// import Products from './Data'
+
 const OurProducts = () => {
+  const[Products,setProducts] = useState([]);
+ 
+
+  useEffect(()=>{
+    const fetchData = async ()=>{
+      try{
+        const response = await axios.get("http://localhost:3000/api/products");
+        setProducts(response.data);
+      }
+      catch(err){
+        console.log(err);
+      }
+    }
+    fetchData();
+  },[])
+
+ 
+    const getRandomProducts = () => {
+    const startIndex = Math.floor(Math.random() * (Products.length - 4)); // Adjust 4 based on the number of products you want to display
+    return Products.slice(startIndex, startIndex + 4);
+  };
+
+
   return (
+   
     <div className='ourproducts'>
-         <div className="writingSection">
+         <div className="writingSection" data-aos="fade-right">
           <h4 className='heading4'>Our Products</h4>
           <h1 className='heading1'>Explore Our Products</h1>
         </div>
         <div className="cardsSection" id='productssection'>
-          <Card image={dairymilk} title="Breed Dry Dog Food" price="100" price2="240"/>
-          <Card image={camera2} title="CANON EOS DSLR Camera" price="220" price2="340"/>
-          <Card image={laptop} title="ASUS FHD Gaming Laptop" price="700" price2="880"/>
-          <Card image={mercedes} title="Kids Electric Car" price="440" price2="540"/>
+          
+          {
+            getRandomProducts().map((ele) => {
+              return (
+                <Card id={ele.id} image={ele.image} price={ele.price} title={ele.title} />
+           )
+            })
+          }
         </div>
         <div className="cardsSection" id='productssection2'>
-        <Card image={sportsshoes} title="Jr.Zoom Soccer Cleats" price="1100" price2="1240"/>
-          <Card image={controller} title="GP11 Shooter USB Gamepad" price="660" price2="745"/>
-          <Card image={jacket2} title="Quilted Jacket" price="600" price2="720"/>
-          <Card image={bag} title="Gucci duffle bag" price="600" price2="720"/>
+     
+          {
+            getRandomProducts().map((ele) => {
+              return (
+                <Card id={ele.id} image={ele.image} price={ele.price} title={ele.title} />
+           )
+            })
+          }
         </div>
     </div>
   )

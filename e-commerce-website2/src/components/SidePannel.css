@@ -18,12 +18,27 @@
     font-size: 1.1rem;
     color: #000;
 }
+.sidelink{
+    color: #000;
+    text-decoration: none;
+}
 
+/* .sidelink:hover{
+    color: white;
+} */
 .barListitem{
+    text-align: center;
     margin-top: 0.5rem;
     cursor: pointer;
 }
 
 .barListitem:hover{
-    color: #DB4444;
+    background-color: #DB4444;
+    color: white;
+    border-radius: 10px;
+}
+
+.item-link{
+    text-decoration: none;
+    color: #000;
 }

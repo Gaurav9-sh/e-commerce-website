@@ -74,7 +74,7 @@ function About() {
    
    <>
    <div className="top">
-    <div className="top-left">
+    <div className="top-left" data-aos="zoom-in" data-aos-duration="700">
       <div id="top-left-inner">
       <h2 className='hh2'>Our Story</h2>
       <p>

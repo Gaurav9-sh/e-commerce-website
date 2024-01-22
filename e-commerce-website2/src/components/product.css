@@ -36,11 +36,14 @@
 .bbox {
     background-color: #F5F5F5;
     margin: 30px;
+    cursor: pointer;
+    border: 1px solid rgb(185, 177, 177);
 }
 
 .innner-left2 {
     margin-right: 40px;
-    background-color: #F5F5F5;
+    background-color: #e6dada;
+   
 }
 
 .rmain {
