@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import login from '../images/login.png'
+import { useNavigate } from 'react-router';
+import {toast, ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const Signup = () => {
+    const navigate = useNavigate();
     const [user, setUser] = useState({
         name: "",
         email: "",
-        phone: "",
         password: "",
         confirmpassword: ""
     })
@@ -16,7 +19,7 @@ const Signup = () => {
     const handleinput = (e) => {
         const name = e.target.name;
         const value = e.target.value;
-        console.log(name, value);
+        
 
         setUser({ ...user, [name]: value })
     }
@@ -26,15 +29,45 @@ const Signup = () => {
         if (name && email && password && (password === confirmpassword)) {
             try {
                 await axios.post("http://localhost:3000/register", user)
-                    .then(res => console.log(res))
+                    .then(res => console.log(res))  
+
+                toast.success('Signup successfully', {
+                    position: 'top-right',
+                    autoClose: 2000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                    progress: undefined,
+                  });
+                  setTimeout(()=>{
+                    navigate('/login')
+                   },500)
             }
 
             catch (e) {
                 console.log(e);
+                toast.error('Error in registration', {
+                    position: 'top-right',
+                    autoClose: 2000, // Close the notification after 2000ms (2 seconds)
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                    progress: undefined,
+                  });
             }
         }
         else {
-            alert("Invalid input")
+           toast.error('Invalid input', {
+                    position: 'top-right',
+                    autoClose: 2000, // Close the notification after 2000ms (2 seconds)
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                    progress: undefined,
+                  });
         }
 
     }
@@ -44,9 +77,9 @@ const Signup = () => {
                 <img src={login} alt="" />
             </div>
             <div className="formcontent">
-            <div> 
-      <h1 className='formheading'>Signup To Exclusive</h1>
-      </div>
+                <div>
+                    <h1 className='formheading'>Signup To Exclusive</h1>
+                </div>
                 <form action="" onSubmit={(e) => { e.preventDefault(); register(); }} >
                     <div>
 
@@ -58,19 +91,17 @@ const Signup = () => {
                     </div>
                     <div>
 
-                        <input type="text" autoComplete='off' value={user.phone} onChange={handleinput} name='phone' id='phone' className='forminput' placeholder='Enter phone no.' />
+                        <input type="password" autoComplete='off' value={user.password} onChange={handleinput} name='password' id='password' className='forminput' placeholder='Enter password' />
                     </div>
                     <div>
 
-                        <input type="text" autoComplete='off' value={user.password} onChange={handleinput} name='password' id='password' className='forminput' placeholder='Enter password' />
+                        <input type="password" autoComplete='off' value={user.confirmpassword} onChange={handleinput} name='confirmpassword' id='confirmpassword' className='forminput' placeholder='Confirm Password' />
                     </div>
-                    <div>
-
-                        <input type="text" autoComplete='off' value={user.confirmpassword} onChange={handleinput} name='confirmpassword' id='confirmpassword' className='forminput' placeholder='Confirm Password' />
-                    </div>
-                    <button type='submit' className='formbtn'>Registration</button>
+                    <button type='submit' className='formbtn'>Signup</button>
+                    
                 </form>
             </div>
+            <ToastContainer/>
         </div>
 
     )

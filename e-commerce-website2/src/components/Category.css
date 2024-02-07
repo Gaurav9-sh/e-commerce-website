@@ -1,8 +1,6 @@
 .category{
     position: relative;
-    /* border: 1px solid red; */
     height: 25rem;
-    /* top: 16rem; */
 }
 
 .boxCategory{
@@ -11,8 +9,11 @@
     gap: 6rem;
     margin-left: 1.5rem;
     margin-top: 2rem;
+    transition: all 0.5s;
 }
-
+.boxCategory img:hover{
+    scale: 1.4;
+}
 .horizontalline{
     width: 90%;
     margin-left: 1.5rem;

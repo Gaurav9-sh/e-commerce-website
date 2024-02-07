@@ -1,10 +1,7 @@
-.card{
 
-    /* position: absolute; */
-    /* border: 1px solid; */
+.card{
     height: 64vh;
     min-width: 20vw;
-    /* top: 40rem; */
     left: 5rem;
     border: none;
     display: flex;
@@ -12,33 +9,15 @@
     gap: 8px;
 }
 
-/* .cardImage{
-    border: 1px solid red;
-    height: 50vh;
-    min-width: 19vw;
-    left: 5rem;
-    border-radius: 4px;
-    border: none;
-} */
-
-/* .cardImage img{
-    height: 11rem;
-    width: 14rem;
-} */
-/* .cardImage img:hover{
-    transform: scale(1.1);
-} */
-/* .cardImage img{
-    transition: all 1s;
-} */
 .cardImage{
     height: 36vh;
     background-color: #F5F5F5;
     text-align: center;
-    padding-top: 2rem;
-   
+    padding-top: 2rem;   
 }
-
+.cardImage img:hover{
+    scale: 1.1;
+}
 .specification{
     display: flex;
     column-gap: 2rem;
@@ -46,11 +25,9 @@
 
 .cardImage img{
     mix-blend-mode:multiply;
-    /* object-fit: contain; */
     max-width: 100%;
     max-height: 100%;
-    /* width: 10rem;
-    height: 10rem; */
+    transition: all 0.1s;
 }
 
 .sale{
@@ -79,4 +56,9 @@
 
 #cartbtn:hover{
     background-color: #e67777;
+}
+
+.star-specification{
+    display: flex;
+    justify-content: space-between;
 }

@@ -1,0 +1,55 @@
+/* Cart.css */
+
+.cart-container {
+    margin: 20px;
+  }
+  
+  .cart-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .cart-item-details {
+    flex-grow: 1;
+  }
+  
+  .cart-item-title {
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .cart-item-price {
+    margin: 0;
+  }
+  
+  .cart-item-delete {
+    background-color: #DB4444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+ 
+  .total{
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  
+  

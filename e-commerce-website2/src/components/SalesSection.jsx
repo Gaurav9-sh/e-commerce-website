@@ -8,10 +8,25 @@ import image4 from '../images/image4.jpg'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import axios from 'axios'
-import Products from './Data'
+// import Products from './Data'
 
 
 const SalesSection = () => {
+
+     const [products, setProducts] = useState([]);
+
+    useEffect(() =>{
+     const fetchData = async () => {
+          try{
+               const response = await axios.get("http://localhost:3000/api/products");
+               setProducts(response.data);
+          }
+          catch(err){
+               console.log(err);
+          }
+     }
+     fetchData();
+    },[])
      
      const boxRef = useRef(null);
 
@@ -31,7 +46,10 @@ const SalesSection = () => {
           }
      }
 
-
+    const getRandomProducts = () => {
+     const startIndex = Math.floor(Math.random() * (products.length - 7));
+     return products.slice(startIndex,startIndex+7);
+    }
 
      return (
           <div className='saleSection'>
@@ -47,7 +65,7 @@ const SalesSection = () => {
                </div>
                <div className="cardsSection" ref={boxRef}>
                     {
-                         Products.map((ele) => {
+                         getRandomProducts().map((ele) => {
                               return (
                                    <Card id={ele.id} image={ele.image} price={ele.price} title={ele.title} />
                               )

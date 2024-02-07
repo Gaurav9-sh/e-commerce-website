@@ -35,7 +35,7 @@ const BestSelling = () => {
       <div className="cardsSection" id='sellingproduct'>
 
         {
-          Products.slice(24, 28).map((ele) => {
+          Products.slice(45, 49).map((ele) => {
             return (
               <Card id={ele.id} image={ele.image} price={ele.price} title={ele.title} />
             )

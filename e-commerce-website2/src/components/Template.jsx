@@ -9,14 +9,14 @@ import { useParams } from 'react-router'
 
 
 const Template = () => {
- 
+  window.scrollTo(0,0);
   const {category} = useParams();
   const[Products,setProducts] = useState([]);
 
   useEffect(()=>{
    const fetchData = async ()=>{
     try{
-      const response = await axios.get('http://localhost:3000/api/products');
+      const response = await axios.get(`http://localhost:3000/api/products/${category}`);
       setProducts(response.data);
     }
     catch(err){
@@ -26,7 +26,7 @@ const Template = () => {
    fetchData();
   })
 
-  const filteredProducts = Products.filter((product) => product.category === category);
+  // const filteredProducts = Products.filter((product) => product.category === category);
 
   
   return (
@@ -35,7 +35,7 @@ const Template = () => {
         <h1 className='heading1' id='templateHeading'>{category}</h1>
         <div className="TemplateContainer">
           {
-            filteredProducts.map((ele) => {
+            Products.map((ele) => {
               return (
                 <div className="Template">
                   <Card id={ele.id} image={ele.image} price={ele.price} title={ele.title} />

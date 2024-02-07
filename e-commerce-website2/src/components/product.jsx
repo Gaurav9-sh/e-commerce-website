@@ -1,61 +1,126 @@
 import React from "react";
 import { useState , useEffect } from "react";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import "./product.css"
-import image57 from "../images/image57.jpg"
-import image59 from "../images/image59.jpg"
-import image61 from "../images/image61.jpg"
-import image58 from "../images/image58.jpg"
-import image63 from "../images/image63.jpg"
 import icondelivery from "../images/icondelivery.jpg"
 import iconreturn from "../images/iconreturn.jpg"
-import OurProducts from "./OurProducts";
-import BestSelling from "./BestSelling";
-import axios from 'axios'
 import Products from "./Data";
+import { useDispatch } from "react-redux";
+import { addToCart } from "./addtocartSlice";
+import { jwtDecode } from "jwt-decode";
+import axios from "axios";
+import {toast,ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 function Product() {
     window.scrollTo(0, 0);
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
     const {id} = useParams();
     console.log(id)
     const [colour,setColour] = useState("black")
-    const [val,setVal] = useState(0)
+    const [isInWishlist, setIsInWishlist] = useState(false);
+
     const product = Products.find((pdt) => pdt.id == id);
     const [selectedImage, setSelectedImage] = useState(product ? product.image : "");
+    
+    useEffect(() => {
+        // Check if the product is already in the user's wishlist
+        // (Assuming you have a way to fetch the user's wishlist items)
+        // You might need to adjust the API endpoint and logic based on your backend implementation
+        const checkWishlist = async () => {
+          const token = localStorage.getItem("token");
+          if (token) {
+            const decodedToken = jwtDecode(token);
+            const userId = decodedToken._id;
+    
+            try {
+              const response = await axios.get(
+                `http://localhost:3000/api/checkwishlist/${userId}/${id}`
+              );
+              
+              setIsInWishlist(response.data.isInWishlist);
+            } catch (error) {
+              console.error(error);
+            }
+          }
+        };
+    
+        checkWishlist();
+      }, [id]);
 
     const handleImageClick = (newImage) => {
         setSelectedImage(newImage);
     };
+    const wishlist = async () => {
+        const token = localStorage.getItem("token");
+        if (token) {
+          const decodedToken = jwtDecode(token);
+          const userId = decodedToken._id;
+          try {
+            if (isInWishlist) {
+              // Remove item from wishlist
+              await axios.delete(
+                `http://localhost:3000/api/wishlist/${userId}/${id}`
+              );
+            } else {
+              // Add item to wishlist
+              await axios.post("http://localhost:3000/api/wishlist", {
+                userId,
+                id,
+                image: product.image,
+                title: product.title,
+                price: product.price,
+              });
+            }
+    
+            // Toggle the state
+            setIsInWishlist(!isInWishlist);
+          } catch (error) {
+            console.error(error);
+          }
+        }
+    }
 
-  
-    function dec() {
+    const token = localStorage.getItem("token")
+    const handleAddToCart = async () =>{
+        if(token)
+        {
+          const { id, title,price,image} = product;
+          const decodedToken = jwtDecode(token)
+          const userId = decodedToken._id;
+          dispatch(addToCart({ id, title,price,image, userId}))
+    
+          const response = await axios.post('http://localhost:3000/Cart', {
+            userId,
+            image,
+            id,
+            title,
+            price
+          })
+
+          toast.success('Item added to cart', {
+            position: 'top-right',
+            autoClose: 2000, 
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+          });
+          console.log(response.data.message)
+        }
+        else{
+             navigate('/login')
+        }
         
-        if (val != 0) setVal(val-1);
-
-
-    }
-    function add() {
-
-        setVal(val+1);
-
-    }
-    function wishlist() {
-
-        setColour((prevColour) => (prevColour === "#DB4444" ? "black" : "#DB4444"));
-        
-
-    }
-
+      }
     return (
         <>
         
         <div className="rmain">
             <div className="left">
                <div className="inner-left1">
-                {/* <div className="bbox">{product ? (<img src={product.image} alt="" className="img1"/>):(<p>Loading....</p>)}</div>
-                <div className="bbox">{product ? (<img src={product.image} alt="" className="img1"/>):(<p>Loading....</p>)}</div>
-                <div className="bbox">{product ? (<img src={product.image} alt="" className="img1"/>):(<p>Loading....</p>)}</div>
-                <div className="bbox">{product ? (<img src={product.image} alt="" className="img1"/>):(<p>Loading....</p>)}</div> */}
                 {product &&
                             product.part.map((part) => (
                                 <div key={part.id} className="bbox" onClick={() => handleImageClick(part.image)} >
@@ -75,18 +140,15 @@ function Product() {
             <div className="right">
                 <div className="inner-right1">
                 <h1>{product ? (product.title):(<p>Loading...</p>)}</h1>
-                <h4>$ 192.00</h4>
+                <h4>${product.price}</h4>
                 <p>{product ? (product.description):(<p>Loading...</p>)}</p>
                 </div>
                 <div className="inner-right2">
                     <p className="iconbtw">
-                        <button onClick={dec} className="dec buttn">&#8722;</button>
-                        <input type="text" value={val} readOnly className="inputt" />
-                        <button onClick={add} className="inc buttn">	&#43;</button>
                         &nbsp;&nbsp;
-                        <button id="buynow" className="buttn">Add To Cart</button>
+                        <button id="buynow" className="buttn" onClick={handleAddToCart} >Add To Cart</button>
                         &nbsp;&nbsp;
-                        <button onClick={wishlist} id="btnwishi" className="buttn"><span id="wishi" style={{ color: colour }}>&#9829;</span></button>
+                        <button onClick={wishlist} id="btnwishi" className="buttn"><span id="wishi" style={{ color: colour }}> {isInWishlist ? "♥" : "♡"}</span></button>
                     </p>
                 </div>
                 <div className="inner-right3">
@@ -107,7 +169,7 @@ function Product() {
                 </div>
             </div>
         </div>
-        {/* <BestSelling/> */}
+       <ToastContainer/>
 
 
         </>

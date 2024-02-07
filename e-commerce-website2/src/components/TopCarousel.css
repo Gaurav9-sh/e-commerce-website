@@ -2,15 +2,21 @@
     position: absolute;
     /* height: 24rem;
     width: 30rem; */
-    width: 58vw;
-    height: 50vh;
+    width: 78vw;
+    height: 58vh;
     /* border: 2px solid; */
-    right: 120px;
-    margin-top: 3rem;
-    /* top: 4rem; */
+    /* right: 120px; */
+    margin-top: 1rem;
+    left: 280px;
+    
 }
 
 .carousel-inner{
-   height: 50vh;
+   height: 58vh;
+}
+
+.carousel-item img{
+    /* border: 1px solid red; */
+    height: 57vh;
 }
 

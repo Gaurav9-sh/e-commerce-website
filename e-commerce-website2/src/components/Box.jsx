@@ -5,7 +5,7 @@ const Box = (props) => {
     <>
         <div className='categoryBox'>
           <img src={props.image} alt="" />
-          <p style={{ fontWeight: '700',color:'black' }}>{props.title}</p>
+          <p>{props.title}</p>
         </div>
     </>
   )

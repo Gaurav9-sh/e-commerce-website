@@ -1,14 +1,10 @@
 .saleSection{
-    /* border: 1px solid; */
     height: 40rem;
     position: relative;
-    /* top: 10rem; */
-    /* overflow: hidden; */
     margin-top: 5rem;
 }
 
 .writingSection{
-    /* border: 1px solid; */
     padding-left: 1.7rem;
 }
 
@@ -16,18 +12,21 @@
     border-left: 15px solid;
     padding-left: 1rem;
     color: #DB4444;
-    font-family: poppins;
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
 }
 
 .heading1{
-    font-family: poppins;
-    font-weight: 600;
+    /* font-family: poppins; */
+    /* font-weight: 600; */
+    font-size: 3rem;
     margin-top: 2rem;
+    font-family: 'Playfair Display', serif;
 }
 
 .cardsSection{
     position: relative;
-    /* border: 1px solid green; */
     display: flex;
     gap: 2rem; 
     margin-left: -3rem;

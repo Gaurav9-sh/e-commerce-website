@@ -1,0 +1,29 @@
+.user-profile {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    background-color: #f9f9f9;
+  }
+  
+  .user-profile h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .user-profile div {
+    margin-bottom: 10px;
+  }
+  
+  .user-profile strong {
+    margin-right: 5px;
+  }
+  
+  /* Media Query for screens smaller than 600px */
+  @media only screen and (max-width: 600px) {
+    .user-profile {
+      max-width: 90%;
+    }
+  }
+  

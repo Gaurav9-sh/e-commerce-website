@@ -15,11 +15,11 @@ const Category = () => {
           <h1 className='heading1'>Browse By Category</h1>
         </div>
         <div className="boxCategory">
-          <Link to="/more/Phones" ><Box image={Cellphone} title="Phones" /></Link>
-          <Link to="/more/Computers"><Box image={Computer} title="Computers" /></Link>
-          <Link to="/more/Headphones"><Box image={Headphone} title="Headphone" /></Link>
-          <Link to="/more/Camera"><Box image={Camera} title="Camera" /></Link>
-          <Link to="/more/Gamepad"><Box image={Gamepad} title="Gamepad" /></Link>
+          <Link to="/more/Phones" ><Box image={Cellphone}  /></Link>
+          <Link to="/more/Computers"><Box image={Computer}  /></Link>
+          <Link to="/more/Headphones"><Box image={Headphone}  /></Link>
+          <Link to="/more/Camera"><Box image={Camera}  /></Link>
+          <Link to="/more/Gamepad"><Box image={Gamepad}  /></Link>
         </div>
         <hr className="horizontalline"  />
     </div>

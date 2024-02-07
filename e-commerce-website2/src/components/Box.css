@@ -15,5 +15,9 @@
     cursor: pointer;
     color: white;
 }
+.categoryBox p{
+    text-decoration: underline;
+    color: black;
+}
 
 
