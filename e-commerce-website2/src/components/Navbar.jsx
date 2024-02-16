@@ -2,9 +2,6 @@ import React, { useState } from 'react'
 import './Navbar.css'
 import { NavLink, Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom'
-import ShoppingCart from '@mui/icons-material/ShoppingCart';
-import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartCheckoutOutlinedIcon from '@mui/icons-material/ShoppingCartCheckoutOutlined';
 
@@ -74,20 +71,17 @@ const Navbar = () => {
             </form> */}
           
             <div className="cart-user">
-              <div className="cart">
+              {token? (<div className="cart">
                 <Link to="Cart" ><ShoppingCartCheckoutOutlinedIcon id="shoppingcart" /></Link>
-              </div>
+              </div>):<></>}
               <div className="fav">
-               <Link to="wishlist" > <FavoriteBorderIcon id="favIcon" /> </Link>
+              {token ? (<Link to="wishlist" > <FavoriteBorderIcon id="favIcon" /> </Link>):<></>}
               </div>
               
               <div className="user">
-                <Link to="user">
-                  {/* <Stack direction="row" spacing={1}>
-                    <Avatar alt="Travis Howard" src="" />
-                  </Stack> */}
+               {token ? ( <Link to="user">
                   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpFdo7jMQ4ZhDD1zqDdGGW0HjKNbV4iiOniQ&usqp=CAU" alt="" />
-                </Link>
+                </Link>) : <></>}
               </div>
             </div>
           </div>

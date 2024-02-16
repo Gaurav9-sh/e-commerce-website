@@ -1,7 +1,4 @@
-.top-left, .top-right {
-    /* min-width: 837px;
-    min-height: 609px; */
-    /* text-align: center; */
+/* .top-left, .top-right {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +11,7 @@
 }
 
 .hh2 {
-    /* text-align: center; */
+    
     font-size: 50px;
     padding-bottom: 10px;
 }
@@ -27,4 +24,73 @@
     display: flex;
     justify-content: center;
     font-weight: bold;
+} */
+
+/* About Page Styles */
+
+/* About Page Styles */
+/* About Page Styles */
+
+.top-left, .top-right {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.top-left img, .hh2 {
+    flex: 1;
+}
+
+.top-left img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hh2 {
+    font-size: 3rem;
+    padding-bottom: 10px;
+}
+
+.top-left {
+    padding: 5% 10%;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.mid1, .bottom2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 6% 0;
+}
+
+@media (max-width: 768px) {
+    .top-left, .top-right {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-left img, .hh2 {
+        flex: none;
+        width: auto; /* Reset width to auto for responsiveness */
+    }
+
+    .top-left {
+        padding: 5%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hh2 {
+        font-size: 2rem;
+    }
+
+    .top-right img {
+        max-width: 100%; /* Ensure image inside .top-right is responsive */
+        height: auto; /* Ensure image height adjusts proportionally */
+    }
 }

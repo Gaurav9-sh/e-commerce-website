@@ -9,7 +9,7 @@ import { useParams } from 'react-router'
 
 
 const Template = () => {
-  window.scrollTo(0,0);
+  // window.scrollTo(0,0);
   const {category} = useParams();
   const[Products,setProducts] = useState([]);
 
@@ -26,7 +26,7 @@ const Template = () => {
    fetchData();
   })
 
-  // const filteredProducts = Products.filter((product) => product.category === category);
+ 
 
   
   return (

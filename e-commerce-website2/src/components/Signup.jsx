@@ -49,7 +49,7 @@ const Signup = () => {
                 console.log(e);
                 toast.error('Error in registration', {
                     position: 'top-right',
-                    autoClose: 2000, // Close the notification after 2000ms (2 seconds)
+                    autoClose: 2000,
                     hideProgressBar: true,
                     closeOnClick: true,
                     pauseOnHover: false,
