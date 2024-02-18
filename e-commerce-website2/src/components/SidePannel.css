@@ -1,43 +1,84 @@
- .sidepannel{
-    
-    border-right: 2px solid;
-    border-color: rgb(210, 200, 200);
-    height: 60vh;
-    width: 18vw;
-    padding-top: 2rem;
-   
+.sidepannel {
+  border-right: 2px solid;
+  border-color: rgb(210, 200, 200);
+  /* height: 55vh; */
+  width: 18vw;
+  padding-top: 1rem;
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: center;
 }
 
-.barList{
-  
-    list-style: none;
-    font-weight: 400;
-    font-size: 1.1rem;
-    color: #000;
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    gap: 0.73rem;
-
+.barList {
+  /* list-style: none; */
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* background-color: aqua; */
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
+  text-align: center;
+  gap: 0.73rem;
 }
-.sidelink{
-    color: #000;
-    text-decoration: none;
-}
-
-.barListitem{
-    width: 160px;
-    cursor: pointer;
-    
+.sidelink {
+  color: #000;
+  text-decoration: none;
 }
 
-.barListitem:hover{
-    background-color: #DB4444;
-    color: white;
-    border-radius: 10px;
+.barListitem {
+  /* width: 160px; */
+  padding: 10px 20px;
+  /* background-color: #db4444; */
+  cursor: pointer;
 }
 
-.item-link{
-    text-decoration: none;
-    color: #000;
-} 
+.barListitem:hover {
+  background-color: #db4444;
+  color: white;
+  border-radius: 10px;
+}
+
+.item-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.resp-bar {
+  background-color: #db4444;
+  padding: 11px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: fixed;
+  z-index: 4;
+  top: 50%;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.sidepanel2 {
+  display: none;
+}
+
+.head-side {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+@media screen and (max-aspect-ratio: 5/3) {
+  .sidepannel-hidden {
+    display: none;
+  }
+  .sidepannel {
+    width: 100%;
+    border-right: none;
+  }
+  .sidepanel2 {
+    display: block;
+  }
+}

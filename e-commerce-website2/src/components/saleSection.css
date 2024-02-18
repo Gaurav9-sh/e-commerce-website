@@ -1,55 +1,108 @@
-.saleSection{
-    height: 40rem;
+.saleSection {
+  /* height: 40rem; */
+  position: relative;
+  margin-top: 1.5rem;
+  padding-bottom: 0;
+}
+
+.writingSection {
+  padding-left: 1.7rem;
+}
+
+.heading4 {
+  border-left: 15px solid;
+  padding-left: 1rem;
+  color: #db4444;
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+
+.heading1 {
+  /* font-family: poppins; */
+  /* font-weight: 600; */
+  font-size: 3rem;
+  margin-top: 2rem;
+  font-family: "Playfair Display", serif;
+}
+
+.cardsSection {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  margin-left: -3rem;
+  overflow: hidden;
+}
+
+.slidingClass {
+  display: flex;
+}
+
+.buttonClass {
+  position: absolute;
+  right: 2rem;
+}
+
+.buttonClass button {
+  margin: 0.5rem;
+  border-radius: 20px;
+  border: none;
+  color: #db4444;
+}
+
+#morebutton {
+  margin-left: 45%;
+  margin-top: 2rem;
+}
+
+@media screen and (max-aspect-ratio: 4/3) {
+  .saleSection {
+    padding-bottom: 40px;
+  }
+  .saleSection {
+    /* height: 40rem; */
     position: relative;
-    margin-top: 5rem;
-}
+    margin-top: 1.5rem;
+    padding-bottom: 10px;
+  }
 
-.writingSection{
-    padding-left: 1.7rem;
-}
+  .writingSection {
+    padding-left: 0.7rem;
+  }
 
-.heading4{
-    border-left: 15px solid;
-    padding-left: 1rem;
-    color: #DB4444;
-    font-size: 2rem;
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-}
-
-.heading1{
-    /* font-family: poppins; */
-    /* font-weight: 600; */
-    font-size: 3rem;
-    margin-top: 2rem;
-    font-family: 'Playfair Display', serif;
-}
-
-.cardsSection{
-    position: relative;
-    display: flex;
-    gap: 2rem; 
-    margin-left: -3rem;
-    overflow: hidden;
-}
-
-.slidingClass{
-    display: flex;
-}
-
-.buttonClass{
+  .buttonClass {
     position: absolute;
-    right: 2rem;
-}
+    right: 1rem;
+  }
 
-.buttonClass button{
+  .buttonClass button {
     margin: 0.5rem;
     border-radius: 20px;
+    position: relative;
+    top: -40px;
     border: none;
-    color: #DB4444;
-}
+    color: #db4444;
+  }
 
-#morebutton{
+  #morebutton {
     margin-left: 45%;
     margin-top: 2rem;
+  }
+
+  .heading4 {
+    border-left: 15px solid;
+    padding-left: 1rem;
+    color: #db4444;
+    font-size: 1.5rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+  }
+
+  .heading1 {
+    /* font-family: poppins; */
+    /* font-weight: 600; */
+    font-size: 1.5rem;
+    margin-top: 0rem;
+    font-family: "Playfair Display", serif;
+  }
 }

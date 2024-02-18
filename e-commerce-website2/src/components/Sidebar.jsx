@@ -1,24 +1,94 @@
-import React from 'react'
-import './SidePannel.css'
-import { Link ,NavLink } from 'react-router-dom'
+import React from "react";
+import "./SidePannel.css";
+import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Offcanvas from "react-bootstrap/Offcanvas";
 
 const Sidebar = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
-    <div className='sidepannel'>
-        <ul className='barList'>
-           <Link to="/more/WomenFashion" className='sidelink' ><li className='barListitem'>Women's Fashion</li></Link>
-            <Link className='item-link' to="/more/MenFashion"><li className='barListitem'>Men's Fashion</li></Link>
-            <Link className='item-link' to="/more/electronics"><li className='barListitem'>Electronics</li></Link>
-            <Link className='item-link' to="/more/Lifestyles"><li className='barListitem'>Home & Lifestyle</li></Link>
-            <Link className='item-link' to="/more/Medicines" ><li className='barListitem'>Medicine</li></Link>
-            <Link className='item-link' to="/more/Sports&Outdoor"><li className='barListitem'>Sports & Outdoor</li></Link>
-            <Link className='item-link' to="/more/Baby&Toy's" ><li className='barListitem'> Baby's & Toys</li></Link>
-            <Link className='item-link' to="/more/Groceries&Pets" ><li className='barListitem'>Groceries & Pets</li></Link>
-            <Link className='item-link' to="/more/Health&Beauty" ><li className='barListitem'>Health & Beauty</li></Link>
-        </ul>
+    <>
+      <div className="sidepannel sidepannel-hidden">
+        <div className="barList">
+          <Link to="/more/WomenFashion" className="sidelink">
+            <div className="barListitem">Women's Fashion</div>
+          </Link>
+          <Link className="item-link" to="/more/MenFashion">
+            <div className="barListitem">Men's Fashion</div>
+          </Link>
+          <Link className="item-link" to="/more/electronics">
+            <div className="barListitem">Electronics</div>
+          </Link>
+          <Link className="item-link" to="/more/Lifestyles">
+            <div className="barListitem">Home & Lifestyle</div>
+          </Link>
+          <Link className="item-link" to="/more/Medicines">
+            <div className="barListitem">Medicine</div>
+          </Link>
+          <Link className="item-link" to="/more/Sports&Outdoor">
+            <div className="barListitem">Sports & Outdoor</div>
+          </Link>
+          <Link className="item-link" to="/more/Baby&Toy's">
+            <div className="barListitem"> Baby's & Toys</div>
+          </Link>
+          <Link className="item-link" to="/more/Groceries&Pets">
+            <div className="barListitem">Groceries & Pets</div>
+          </Link>
+          <Link className="item-link" to="/more/Health&Beauty">
+            <div className="barListitem">Health & Beauty</div>
+          </Link>
+        </div>
+      </div>
+      <div className="sidepanel2">
+        <Offcanvas show={show} onHide={handleClose}>
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title className="head-side">Categories</Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <div className="sidepannel">
+              <div className="barList">
+                <Link to="/more/WomenFashion" className="sidelink">
+                  <div className="barListitem">Women's Fashion</div>
+                </Link>
+                <Link className="item-link" to="/more/MenFashion">
+                  <div className="barListitem">Men's Fashion</div>
+                </Link>
+                <Link className="item-link" to="/more/electronics">
+                  <div className="barListitem">Electronics</div>
+                </Link>
+                <Link className="item-link" to="/more/Lifestyles">
+                  <div className="barListitem">Home & Lifestyle</div>
+                </Link>
+                <Link className="item-link" to="/more/Medicines">
+                  <div className="barListitem">Medicine</div>
+                </Link>
+                <Link className="item-link" to="/more/Sports&Outdoor">
+                  <div className="barListitem">Sports & Outdoor</div>
+                </Link>
+                <Link className="item-link" to="/more/Baby&Toy's">
+                  <div className="barListitem"> Baby's & Toys</div>
+                </Link>
+                <Link className="item-link" to="/more/Groceries&Pets">
+                  <div className="barListitem">Groceries & Pets</div>
+                </Link>
+                <Link className="item-link" to="/more/Health&Beauty">
+                  <div className="barListitem">Health & Beauty</div>
+                </Link>
+              </div>
+            </div>
+          </Offcanvas.Body>
+        </Offcanvas>
+        <div className="resp-bar" onClick={handleShow}>
+          C <br /> A <br /> T <br /> E <br /> G <br /> O <br /> R <br /> I
+          <br /> E <br /> S
+        </div>
+      </div>
+    </>
+  );
+};
 
-    </div>
-  )
-}
-
-export default Sidebar
+export default Sidebar;
