@@ -8,7 +8,7 @@ import {toast,ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
-  window.scrollTo(0,0);
+  // window.scrollTo(0,0);
   const navigate = useNavigate();
   const [user, setUser] = useState({
     name: "",

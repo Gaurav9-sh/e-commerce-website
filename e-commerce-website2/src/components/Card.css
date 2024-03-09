@@ -5,6 +5,7 @@
   border: none;
   display: flex;
   flex-direction: column;
+  /* border: 1px solid; */
   /* gap: 8px; */
 }
 
@@ -65,14 +66,10 @@
 @media screen and (max-aspect-ratio: 4/3) {
   .card {
     height: fit-content;
-    /* min-height: 80vw; */
-    min-width: 90vw;
-    left: 4.2rem;
+    min-width: 83vw;
     border: none;
     display: flex;
     text-align: center;
-    /* flex-direction: column; */
-    /* gap: 8px; */
   }
 
   .cardImage {

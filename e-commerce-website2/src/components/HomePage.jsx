@@ -11,6 +11,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 const HomePage = () => {
+  window.scrollTo(0,0)
   return (
     <div>
       <div style={{ display: "flex", justifyContent: "space-evenly" }}>

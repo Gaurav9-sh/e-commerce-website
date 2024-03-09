@@ -1,12 +1,14 @@
 .saleSection {
-  /* height: 40rem; */
+ 
   position: relative;
   margin-top: 1.5rem;
-  padding-bottom: 0;
+  
 }
 
 .writingSection {
-  padding-left: 1.7rem;
+  padding-left: 3rem;
+  margin-top: 4rem;
+  
 }
 
 .heading4 {
@@ -19,8 +21,7 @@
 }
 
 .heading1 {
-  /* font-family: poppins; */
-  /* font-weight: 600; */
+ 
   font-size: 3rem;
   margin-top: 2rem;
   font-family: "Playfair Display", serif;
@@ -29,11 +30,15 @@
 .cardsSection {
   position: relative;
   display: flex;
-  gap: 2rem;
-  margin-left: -3rem;
+  gap: 1rem;
+  /* margin-left: -2rem; */
   overflow: hidden;
+  /* border: 1px solid; */
+  margin-top: 1rem;
 }
-
+.cardsSection > * {
+  flex: 0 0 auto;
+}
 .slidingClass {
   display: flex;
 }
@@ -60,7 +65,7 @@
     padding-bottom: 40px;
   }
   .saleSection {
-    /* height: 40rem; */
+    
     position: relative;
     margin-top: 1.5rem;
     padding-bottom: 10px;
@@ -99,8 +104,7 @@
   }
 
   .heading1 {
-    /* font-family: poppins; */
-    /* font-weight: 600; */
+   
     font-size: 1.5rem;
     margin-top: 0rem;
     font-family: "Playfair Display", serif;

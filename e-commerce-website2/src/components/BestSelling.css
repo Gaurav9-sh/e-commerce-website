@@ -13,13 +13,7 @@
   /* flex-wrap: wrap; */
 }
 
-.bestselling-card {
-}
 
-.cardSection {
-  /* display: flex;
-  flex-wrap: wrap; */
-}
 
 @media screen and (max-aspect-ratio: 4/3) {
   #sellingproduct {

@@ -9,7 +9,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 1rem;
-  /* margin-left: 1.5rem; */
+  /* margin-left: -3rem; */
   margin-top: 2rem;
   transition: all 0.5s;
 }

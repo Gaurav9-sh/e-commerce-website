@@ -16,7 +16,7 @@ function UserProfile() {
       
         const response = await axios.get(`http://localhost:3000/api/userDetails/${userId}`)
 
-        console.log(response);
+        // console.log(response);
         const userDetails = response.data
         setEmail(userDetails.email)
         setName(userDetails.name)

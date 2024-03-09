@@ -1,6 +1,6 @@
 import React from "react";
 import "./TopCarousel.css";
-import iphone from "../images/iphone.png";
+
 
 const TopCarousel = () => {
   return (
@@ -61,18 +61,16 @@ const TopCarousel = () => {
               alt="..."
             />
           </div>
-          {/* <div className="carousel-item">
-          <img src="https://e0.pxfuel.com/wallpapers/606/84/desktop-wallpaper-ecommerce-website-design-company-noida-e-commerce-banner-design-e-commerce.jpg" className="d-block w-100" alt="..."/>
-        </div> */}
+         
         </div>
-        {/* <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Previous</span>
       </button>
       <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Next</span>
-      </button> */}
+      </button>
       </div>
     </div>
     // <></>
