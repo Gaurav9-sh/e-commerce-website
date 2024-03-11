@@ -2,7 +2,7 @@ import React from 'react'
 import "./About.css"
 import storypic from '../../public/images/storypic.png'
 import shoppingbag from "../../public/images/shoppingbag.png"
-import iconSale from "../../public/images/iconSale.png"
+import iconSale from "../../public/images/IconSale.png"
 import delivery from "../../public/images/icondelivery.jpg"
 import Group from "../../public/images/Group.png"
 import bagg from "../../public/images/bagg.png"
