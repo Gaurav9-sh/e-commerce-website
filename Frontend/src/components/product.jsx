@@ -3,7 +3,7 @@ import { useState , useEffect } from "react";
 import { useNavigate, useParams } from "react-router";
 import "./product.css"
 import icondelivery from "../../public/images/icondelivery.jpg"
-import iconreturn from "../../public/images/iconreturn.jpg"
+import iconreturn from "../../public/images/Iconreturn.jpg"
 import Products from "./Data";
 import { useDispatch } from "react-redux";
 import { addToCart } from "./addtocartSlice";
