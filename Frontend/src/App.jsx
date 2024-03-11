@@ -11,18 +11,15 @@ import Login from './components/Login'
 import Signup from './components/Signup'
 import Layout3 from './components/Layout3'
 import Cart from './components/Cart'
-import Success from './components/Success'
 import User from './components/UserProfile'
 import Logout from './components/Logout'
 import Checkout from './components/Checkout'
-import PaymentSuccess from './components/PaymentSuccess'
-import PaymentFail from './components/PaymentFail'
 import Wishlist from './components/Wishlist'
-import { ToastContainer } from 'react-toastify'
+
 
 
 const App = () => {
-  let [loading, setLoading] = useState(true);
+  
   const router = createBrowserRouter([
    
     {
@@ -59,10 +56,6 @@ const App = () => {
           element:<Cart/>
         },
         {
-          path:"/success",
-          element:<Success/>
-        },
-        {
           path:"/user",
           element:<User/>
         },
@@ -87,14 +80,6 @@ const App = () => {
     {
       path:"search",
       element:<Layout3/>
-    },
-    {
-      path:"PaymentSuccess",
-      element:<PaymentSuccess/>
-    },
-    {
-      path:"PaymentFail",
-      element:<PaymentFail/>
     },
     
   ])
