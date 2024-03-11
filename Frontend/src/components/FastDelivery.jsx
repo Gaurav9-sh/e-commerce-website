@@ -1,9 +1,9 @@
 import React from "react";
 import "./FastDelivery.css";
 import DeliveryBox from "./DeliveryBox";
-import delivery from "../images/delivery.png";
-import customerService from "../images/customerService.png";
-import verified from "../images/verified.png";
+import delivery from "../../public/images/delivery.png";
+import customerService from "../../public/images/customerService.png";
+import verified from "../../public/images/verified.png";
 
 const FastDelivery = () => {
   return (

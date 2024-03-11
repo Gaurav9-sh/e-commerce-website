@@ -1,6 +1,6 @@
 import React from "react";
 import "./Card.css";
-import Star from "../images/Star.jpg";
+
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "./addtocartSlice";

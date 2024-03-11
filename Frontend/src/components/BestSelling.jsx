@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./BestSelling.css";
 import Card from "./Card";
-import jacket from "../images/jacket.jpg";
-import bag from "../images/bag.jpg";
-import speaker from "../images/speaker.jpg";
-import cupboard from "../images/cupboard.jpg";
 import axios from "axios";
 // import Products from './Data'
 

@@ -2,8 +2,8 @@ import React from "react";
 import { useState , useEffect } from "react";
 import { useNavigate, useParams } from "react-router";
 import "./product.css"
-import icondelivery from "../images/icondelivery.jpg"
-import iconreturn from "../images/iconreturn.jpg"
+import icondelivery from "../../public/images/icondelivery.jpg"
+import iconreturn from "../../public/images/iconreturn.jpg"
 import Products from "./Data";
 import { useDispatch } from "react-redux";
 import { addToCart } from "./addtocartSlice";

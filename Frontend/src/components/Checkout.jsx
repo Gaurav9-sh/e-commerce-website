@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import "./checkout.css"
-import image59 from "../images/image59.jpg"
 import { useSelector } from 'react-redux';
 import { jwtDecode } from 'jwt-decode';
 import axios from 'axios';

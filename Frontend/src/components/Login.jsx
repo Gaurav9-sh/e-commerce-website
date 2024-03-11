@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 import { useState, useEffect } from 'react'
-import login from '../images/login.png'
+import login from '../../public/images/login.png'
 import './Login.css'
 import { Link, useNavigate } from 'react-router-dom'
 import {toast,ToastContainer} from 'react-toastify'

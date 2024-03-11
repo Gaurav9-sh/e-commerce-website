@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './crousel2.css';
-import image56 from "../images/image56.png"
+import image56 from "../../public/images/image56.png"
 
 function Crousel2() {
 

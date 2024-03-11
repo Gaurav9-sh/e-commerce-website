@@ -1,11 +1,11 @@
 import React from "react";
 import "./Category.css";
 import Box from "./Box";
-import Camera from "../images/Camera.jpg";
-import Computer from "../images/Computer.jpg";
-import Gamepad from "../images/Gamepad.jpg";
-import Headphone from "../images/Headphone.jpg";
-import Cellphone from "../images/Cellphone.jpg";
+import Camera from "../../public/images/Camera.jpg";
+import Computer from "../../public/images/Computer.jpg";
+import Gamepad from "../../public/images/Gamepad.jpg";
+import Headphone from "../../public/images/Headphone.jpg";
+import Cellphone from "../../public/images/Cellphone.jpg";
 import { Link } from "react-router-dom";
 const Category = () => {
   return (

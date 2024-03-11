@@ -1,15 +1,16 @@
 import React from 'react'
 import "./About.css"
-import storypic from '../images/storypic.png'
+import storypic from '../../public/images/storypic.png'
+import shoppingbag from "../../public/images/shoppingbag.png"
+import iconSale from "../../public/images/iconSale.png"
+import delivery from "../../public/images/icondelivery.jpg"
+import Group from "../../public/images/Group.png"
+import bagg from "../../public/images/bagg.png"
+// import Crousel2 from '../../public/images/crousel2'
+import shield from "../../public/images/shield.png"
+import icco from "../../public/images/icco.png"
 import Smallcomps from '../smallcomps/Smallcomps'
-import shoppingbag from "../images/shoppingbag.png"
-import iconSale from "../images/iconSale.png"
-import delivery from "../images/icondelivery.jpg"
-import Group from "../images/Group.png"
-import bagg from "../images/bagg.png"
 import Crousel2 from '../smallcomps/crousel2'
-import shield from "../images/shield.png"
-import icco from "../images/icco.png"
 
 function About() {
 

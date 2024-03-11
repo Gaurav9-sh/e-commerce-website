@@ -1,6 +1,6 @@
 import React from 'react'
 import './Frame.css'
-import jbl from '../images/jblspeaker.jpg'
+import jbl from '../../public/images/jblspeaker.jpg'
 const Frame = () => {
   return (
     <div className='frame'>
