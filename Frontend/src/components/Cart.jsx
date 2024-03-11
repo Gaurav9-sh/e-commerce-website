@@ -50,7 +50,7 @@ const Cart = () => {
 
   const updateQuantityInDatabase = async (itemId, newQuantity) => {
     try {
-      await axios.patch(`http://localhost:3000/api/setQuantity/${userId}/${itemId}`, {
+      await axios.patch(`https://e-commerce-backend-opis.onrender.com/api/setQuantity/${userId}/${itemId}`, {
         quantity: newQuantity,
       });
       fetchData(); // Fetch updated cart items after updating quantity
@@ -61,7 +61,7 @@ const Cart = () => {
   };
   const removeToCartThunk = (userId, itemId) => async (dispatch) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/api/cartitems/${userId}/${itemId}`);
+      const response = await axios.delete(`https://e-commerce-backend-opis.onrender.com/api/cartitems/${userId}/${itemId}`);
 
       dispatch(removeToCart(itemId))
       setUserCartItems((prevItems) => prevItems.filter(item => item.id !== itemId));
@@ -83,7 +83,7 @@ const Cart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/getcartitems/${userId}`);
+        const response = await axios.get(`https://e-commerce-backend-opis.onrender.com/api/getcartitems/${userId}`);
         setUserCartItems(response.data.cartitems);
         setLoading(false);
       } catch (err) {

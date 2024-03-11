@@ -20,7 +20,7 @@ const Card = (props) => {
       const userId = decodedToken._id;
       dispatch(addToCart({ id, title, price, image, userId }));
 
-      const response = await axios.post("http://localhost:3000/Cart", {
+      const response = await axios.post("https://e-commerce-backend-opis.onrender.com/Cart", {
         userId,
         image,
         id,

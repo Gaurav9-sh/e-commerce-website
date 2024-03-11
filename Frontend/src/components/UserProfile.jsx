@@ -14,7 +14,7 @@ function UserProfile() {
     const fetchDetails = async () => {
       try{
       
-        const response = await axios.get(`http://localhost:3000/api/userDetails/${userId}`)
+        const response = await axios.get(`https://e-commerce-backend-opis.onrender.com/api/userDetails/${userId}`)
 
         // console.log(response);
         const userDetails = response.data

@@ -27,7 +27,7 @@ const Login = () => {
 
   async function handleLogin() {
     try {
-      const response = await axios.post('http://localhost:3000/login', user);
+      const response = await axios.post('https://e-commerce-backend-opis.onrender.com/login', user);
 
       if (response.status === 200) {
        localStorage.setItem('token', response.data.token)

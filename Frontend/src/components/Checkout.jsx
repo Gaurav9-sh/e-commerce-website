@@ -16,7 +16,7 @@ function Checkout() {
   useEffect(() => {
     const fetchData = async () =>{
       try{
-        const response = await axios.get(`http://localhost:3000/api/getcartitems/${userId}`)
+        const response = await axios.get(`https://e-commerce-backend-opis.onrender.com/api/getcartitems/${userId}`)
         setProducts(response.data.cartitems);
       }
       catch(err){

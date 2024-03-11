@@ -28,7 +28,7 @@ const Signup = () => {
         const { name, email, password, confirmpassword } = user
         if (name && email && password && (password === confirmpassword)) {
             try {
-                await axios.post("http://localhost:3000/register", user)
+                await axios.post("https://e-commerce-backend-opis.onrender.com/register", user)
                     .then(res => console.log(res))  
 
                 toast.success('Signup successfully', {

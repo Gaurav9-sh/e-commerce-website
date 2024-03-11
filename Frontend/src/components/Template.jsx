@@ -16,7 +16,7 @@ const Template = () => {
   useEffect(()=>{
    const fetchData = async ()=>{
     try{
-      const response = await axios.get(`http://localhost:3000/api/products/${category}`);
+      const response = await axios.get(`https://e-commerce-backend-opis.onrender.com/api/products/${category}`);
       setProducts(response.data);
     }
     catch(err){

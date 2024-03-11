@@ -36,7 +36,7 @@ function Product() {
     
             try {
               const response = await axios.get(
-                `http://localhost:3000/api/checkwishlist/${userId}/${id}`
+                `https://e-commerce-backend-opis.onrender.com/api/checkwishlist/${userId}/${id}`
               );
               
               setIsInWishlist(response.data.isInWishlist);

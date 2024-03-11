@@ -11,7 +11,7 @@ const SearchResult = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/products');
+        const response = await axios.get('https://e-commerce-backend-opis.onrender.com/api/products');
         setProducts(response.data);
       } catch (err) {
         console.log(err);

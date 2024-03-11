@@ -16,7 +16,7 @@ const Wishlist = () => {
 
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/wishlist/${userId}`)
+        const response = await axios.get(`https://e-commerce-backend-opis.onrender.com/api/wishlist/${userId}`)
         const actualItems = Array.isArray(response.data) ? response.data : response.data.wishlistItems;
         setWishlistItems(actualItems)
         setLoading(false);
