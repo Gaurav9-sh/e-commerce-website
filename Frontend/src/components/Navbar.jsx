@@ -104,7 +104,6 @@ const Navbar = () => {
               )}
             </ul>
 
-    
 
             <div className="cart-user">
               {token ? (

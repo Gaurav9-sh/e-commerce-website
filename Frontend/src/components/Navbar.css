@@ -47,6 +47,7 @@
 .cart-user {
   display: flex;
   gap: 1rem;
+  /* border: 1px solid; */
 }
 #favIcon {
   height: 2.4rem;
@@ -75,3 +76,9 @@
   object-fit: cover; /* Maintain aspect ratio and cover the entire space */
 }
 
+@media screen and (max-aspect-ratio: 4/3) {
+  .cart-user{
+    padding-left: 160px;
+    margin-top: 40px;
+  }
+}
