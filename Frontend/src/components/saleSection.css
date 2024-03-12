@@ -31,13 +31,22 @@
   position: relative;
   display: flex;
   gap: 1rem;
-  /* margin-left: -2rem; */
-  overflow: hidden;
-  /* border: 1px solid; */
+  /* overflow: hidden; */
   margin-top: 1rem;
 }
 .cardsSection > * {
   flex: 0 0 auto;
+}
+.cardContainer {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+.cardContainer::-webkit-scrollbar {
+  display: none; 
 }
 .slidingClass {
   display: flex;
@@ -46,6 +55,7 @@
 .buttonClass {
   position: absolute;
   right: 2rem;
+ 
 }
 
 .buttonClass button {
@@ -53,6 +63,10 @@
   border-radius: 20px;
   border: none;
   color: #db4444;
+  padding: 2px;
+  /* border: 1px solid; */
+  text-align: center;
+  justify-content: center;
 }
 
 #morebutton {

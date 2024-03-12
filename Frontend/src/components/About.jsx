@@ -6,7 +6,6 @@ import iconSale from "../../public/images/IconSale.png"
 import delivery from "../../public/images/icondelivery.jpg"
 import Group from "../../public/images/Group.png"
 import bagg from "../../public/images/bagg.png"
-// import Crousel2 from '../../public/images/crousel2'
 import shield from "../../public/images/shield.png"
 import icco from "../../public/images/icco.png"
 import Smallcomps from '../smallcomps/Smallcomps'

@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./saleSection.css";
 import Card from "./Card";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+// import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+// import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import axios from "axios";
 // import Products from './Data'
 
@@ -52,21 +54,22 @@ const SalesSection = () => {
           <h1 className="heading1">Flash Sales</h1>
           <div className="buttonClass">
             <button
-              style={{ width: "30px", height: "30px" }}
+              style={{ width: "40px", height: "40px" }}
               onClick={btnpressprev}
             >
-              <ArrowBackIosIcon />
+              <NavigateBeforeIcon />
             </button>
             <button
-              style={{ width: "30px", height: "30px" }}
+              style={{ width: "40px", height: "40px" }}
               onClick={btnpressnext}
             >
-              <ArrowForwardIosIcon />
+              <NavigateNextIcon />
             </button>
           </div>
         </div>
       </div>
-      <div className="cardsSection" ref={boxRef}>
+     <div className="cardContainer">
+     <div className="cardsSection" ref={boxRef}>
         {getRandomProducts().map((ele) => {
           return (
             <Card
@@ -78,6 +81,7 @@ const SalesSection = () => {
           );
         })}
       </div>
+     </div>
     </div>
   );
 };
