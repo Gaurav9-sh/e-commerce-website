@@ -56,12 +56,12 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" aria-current="page" to="Contact" onClick={handleNavLinkClick}>
+                <NavLink className="nav-link" aria-current="page" to="/Contact" onClick={handleNavLinkClick}>
                   Contact
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" aria-current="page" to="About" onClick={handleNavLinkClick}>
+                <NavLink className="nav-link" aria-current="page" to="/About" onClick={handleNavLinkClick}>
                   About
                 </NavLink>
               </li>
@@ -71,7 +71,7 @@ const Navbar = () => {
                     <NavLink
                       className="nav-link"
                       aria-current="page"
-                      to="logout"
+                      to="/logout"
                       onClick={handleLogout}
                     >
                       Logout
@@ -84,7 +84,7 @@ const Navbar = () => {
                     <NavLink
                       className="nav-link"
                       aria-current="page"
-                      to="signup"
+                      to="/signup"
                       onClick={handleNavLinkClick}
                     >
                       SignUp
@@ -94,7 +94,7 @@ const Navbar = () => {
                     <NavLink
                       className="nav-link"
                       aria-current="page"
-                      to="login"
+                      to="/login"
                       onClick={handleNavLinkClick}
                     >
                       Login
@@ -109,7 +109,7 @@ const Navbar = () => {
             <div className="cart-user">
               {token ? (
                 <div className="cart">
-                  <Link to="Cart" onClick={handleNavLinkClick}>
+                  <Link to="/Cart" onClick={handleNavLinkClick}>
                     <ShoppingCartCheckoutOutlinedIcon id="shoppingcart" />
                   </Link>
                 </div>
@@ -118,7 +118,7 @@ const Navbar = () => {
               )}
               <div className="fav">
                 {token ? (
-                  <Link to="wishlist" onClick={handleNavLinkClick}>
+                  <Link to="/wishlist" onClick={handleNavLinkClick}>
                     {" "}
                     <FavoriteBorderIcon id="favIcon" />{" "}
                   </Link>
@@ -129,7 +129,7 @@ const Navbar = () => {
 
               <div className="user">
                 {token ? (
-                  <Link to="user" onClick={handleNavLinkClick}>
+                  <Link to="/user" onClick={handleNavLinkClick}>
                     <img
                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpFdo7jMQ4ZhDD1zqDdGGW0HjKNbV4iiOniQ&usqp=CAU"
                       alt=""
