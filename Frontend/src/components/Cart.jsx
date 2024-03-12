@@ -1,18 +1,16 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeToCart, updateCartItems } from './addtocartSlice';
+import { removeToCart } from './addtocartSlice';
 import './Cart.css';
 import EmptyCart from './EmptyCart';
 import { useState } from 'react';
 import { jwtDecode } from 'jwt-decode';
 import axios from 'axios';
 import { useEffect } from 'react';
-import { toast, ToastContainer } from 'react-toastify'
+import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router';
-import { CSSProperties } from "react";
-import ClipLoader from "react-spinners/ClipLoader";
-import { Audio, Grid } from 'react-loader-spinner'
+import {Grid } from 'react-loader-spinner'
 
 const Cart = () => {
   let [loading, setLoading] = useState(true);

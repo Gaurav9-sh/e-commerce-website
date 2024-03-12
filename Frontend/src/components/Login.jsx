@@ -14,9 +14,9 @@ const Login = () => {
     name: "",
     password: "",
   })
-
-
-
+  const [clicked,setClicked] = useState(false);
+  console.log(clicked)
+  
 
   const handleinput = (e) => {
     const name = e.target.name;
@@ -26,6 +26,8 @@ const Login = () => {
   }
 
   async function handleLogin() {
+    setClicked(true)
+    console.log(clicked)
     try {
       const response = await axios.post('https://e-commerce-backend-opis.onrender.com/login', user);
 
@@ -41,10 +43,13 @@ const Login = () => {
           progress: undefined,
         });
        setTimeout(()=>{
+        setClicked(false)
         navigate('/')
        },500)
       } 
+      console.log(response.status);
     } catch (err) {
+      setClicked(false)
       toast.error('Wrong credentials', {
         position: 'top-right',
         autoClose: 2000,
@@ -71,7 +76,7 @@ const Login = () => {
           <input type="password" name='password' value={user.password} onChange={handleinput} placeholder='Enter Password' className='forminput' />
         </div>
         <div className='formbtncont'>
-          <button onClick={handleLogin} className='formbtn' >Login</button>
+          <button onClick={handleLogin} className='formbtn' disabled = {clicked} >Login</button>
         </div>
 
       </div>

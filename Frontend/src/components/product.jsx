@@ -16,6 +16,7 @@ function Product() {
     window.scrollTo(0, 0);
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const [clicked, setClicked] = useState(false);
     const {id} = useParams();
     console.log(id)
     const [colour,setColour] = useState("black")
@@ -25,9 +26,6 @@ function Product() {
     const [selectedImage, setSelectedImage] = useState(product ? product.image : "");
     
     useEffect(() => {
-        // Check if the product is already in the user's wishlist
-        // (Assuming you have a way to fetch the user's wishlist items)
-        // You might need to adjust the API endpoint and logic based on your backend implementation
         const checkWishlist = async () => {
           const token = localStorage.getItem("token");
           if (token) {
@@ -98,7 +96,7 @@ function Product() {
             title,
             price
           })
-
+          setClicked(true)
           toast.success('Item added to cart', {
             position: 'top-right',
             autoClose: 2000, 
@@ -146,7 +144,7 @@ function Product() {
                 <div className="inner-right2">
                     <p className="iconbtw">
                         &nbsp;&nbsp;
-                        <button id="buynow" className="buttn" onClick={handleAddToCart} >Add To Cart</button>
+                        <button id="buynow" className="buttn" onClick={handleAddToCart} disabled = {clicked}>{clicked ? ("Added") : ("Add To Cart")}</button>
                         &nbsp;&nbsp;
                         <button onClick={wishlist} id="btnwishi" className="buttn"><span id="wishi" style={{ color: colour }}> {isInWishlist ? "♥" : "♡"}</span></button>
                     </p>

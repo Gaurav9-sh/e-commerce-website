@@ -63,7 +63,9 @@ router.post('/login', async (req, res) => {
                 res.status(401).json({ error: "Invalid details" })
             }
         }
-
+        else{
+            res.status(401).json({error: " user not found"})
+        }
 
     }
     catch (err) {

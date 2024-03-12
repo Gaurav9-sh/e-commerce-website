@@ -58,6 +58,10 @@
   background-color: #e67777;
 }
 
+.btn btn-outline-danger:disabled{
+   cursor: not-allowed;
+   background-color: #e67777;
+}
 .star-specification {
   display: flex;
   justify-content: space-between;

@@ -52,7 +52,7 @@
 }
 
 .forminput:focus{
-    outline: none;
+    border: 1px solid rgb(192, 111, 68);
 }
 
 .formbtn{
@@ -64,7 +64,10 @@
     border-radius: 5px;
     margin-top: 2rem;
 }
-
+.formbtn:disabled {
+    cursor: not-allowed;
+    background-color: #e46f6f;
+}
 .formheading{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 52px;
@@ -74,6 +77,11 @@
     position: relative;
     top: 22px;
 }
+
+.formbtn:hover{
+    background-color: #e46f6f;
+}
+
 /* Media Query for Responsive Design */
 @media only screen and (max-width: 768px) {
     .form{

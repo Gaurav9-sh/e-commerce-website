@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Card.css";
 
 import { Link, useNavigate } from "react-router-dom";
@@ -10,10 +10,12 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Card = (props) => {
+  const[clicked,setClicked] = useState(false)
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
   const handleAddToCart = async () => {
+    setClicked(true)
     if (token) {
       const { id, title, price, image } = props;
       const decodedToken = jwtDecode(token);
@@ -74,22 +76,15 @@ const Card = (props) => {
               </p>{" "}
               <p style={{ fontFamily: "poppins", color: "grey" }}></p>
             </div>
-            {/* <div className="starContainer">
-            <img src={Star} style={{ height: "1rem", width: "1rem" }} alt="" />
-            <img src={Star} style={{ height: "1rem", width: "1rem" }} alt="" />
-            <img src={Star} style={{ height: "1rem", width: "1rem" }} alt="" />
-            <img src={Star} style={{ height: "1rem", width: "1rem" }} alt="" />
-            <img src={Star} style={{ height: "1rem", width: "1rem" }} alt="" />
-            
-          </div> */}
           </div>
         </Link>
         <button
           type="button"
           class="btn btn-outline-danger"
           onClick={handleAddToCart}
+          disabled = {clicked}
         >
-          Add To Cart
+          {clicked ? ("Added") : ("Add To Cart")}
         </button>
         <ToastContainer />
       </div>
