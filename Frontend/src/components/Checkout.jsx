@@ -9,34 +9,39 @@ function Checkout() {
   const token = localStorage.getItem('token')
   const decodedToken = jwtDecode(token);
   const userId = decodedToken._id;
-  const [Products,setProducts] = useState([]);
-  const[ couponCode, setCouponCode] = useState('');
-  const[discount, setDiscount] = useState(0);
+  const [Products, setProducts] = useState([]);
+  const [couponCode, setCouponCode] = useState('');
+  const [discount, setDiscount] = useState(0);
+  const [clicked, setClicked] = useState(false)
+  const [applied, setApplied] = useState(false)
 
   useEffect(() => {
-    const fetchData = async () =>{
-      try{
+    const fetchData = async () => {
+      try {
         const response = await axios.get(`https://e-commerce-backend-opis.onrender.com/api/getcartitems/${userId}`)
         setProducts(response.data.cartitems);
       }
-      catch(err){
+      catch (err) {
         console.log(err);
       }
     }
     fetchData();
-  
-  },[userId])
+
+  }, [userId])
   let total = 0;
 
   const applyCoupon = async () => {
-    try{
-       const response = await axios.get(`https://e-commerce-backend-opis.onrender.com/api/applycoupon?couponCode=${couponCode}`)
-       const discount = response.data.discount;
-       setDiscount(discount);
+    setClicked(true)
+    try {
+      const response = await axios.get(`https://e-commerce-backend-opis.onrender.com/api/applycoupon?couponCode=${couponCode}`)
+      const discount = response.data.discount;
+      setDiscount(discount);
+      setApplied(true)
     }
-    catch(err){
+    catch (err) {
       console.log(err);
     }
+    setClicked(false)
   }
 
   return (
@@ -75,7 +80,7 @@ function Checkout() {
         <div >
           {
             Products.map((cartitem) => {
-              total = cartitem.price*(cartitem.quantity) + total;
+              total = cartitem.price * (cartitem.quantity) + total;
               return (
                 <li>
                   <div className="rright-top">
@@ -87,32 +92,34 @@ function Checkout() {
               )
             })
           }
-   
-       <div className="rright-top">
-        <span>Total without coupon:</span>
-        <span>${total}</span>
-       </div>
-       <hr />
-       <div className="rright-top">
-        <span>Shipping:</span>
-        <span>Free</span>
-       </div>
-       <hr />
-       <div className="rright-top">
-        <span>Total:</span>
-        <span>${total-discount}</span>
-       </div>
 
-       <div>
-        
-        <div id='couppp'>
-            <input type="text" className='inputcheck' placeholder='Coupon Code' value={couponCode} onChange={(e) => setCouponCode(e.target.value)}/>
-            <button className='btncheck' onClick={applyCoupon}>Apply Coupon</button>
-        </div>
-        <div>
-            <button className='btncheck'>Place Order</button>
-        </div>
-       </div>
+          <div className="rright-top">
+            <span>Total without coupon:</span>
+            <span>${total}</span>
+          </div>
+          <hr />
+          <div className="rright-top">
+            <span>Shipping:</span>
+            <span>Free</span>
+          </div>
+          <hr />
+          <div className="rright-top">
+            <span>Total:</span>
+            <span>${total - discount}</span>
+          </div>
+
+          <div>
+
+            <div id='couppp'>
+              <input type="text" className='inputcheck' disabled={applied} placeholder='Coupon Code' value={couponCode} onChange={(e) => setCouponCode(e.target.value)} />
+              <button className={applied ? 'btncheck1' : 'btncheck'} onClick={applyCoupon} disabled={clicked || applied}>
+                {clicked ? "Applying..." : applied ? "Coupon Applied" : "Apply Coupon"}
+              </button>
+            </div>
+            <div>
+              <button className='btncheck'>Place Order</button>
+            </div>
+          </div>
 
         </div>
       </div>
