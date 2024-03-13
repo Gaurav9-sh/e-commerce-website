@@ -10,9 +10,10 @@ import shield from "../../public/images/shield.png"
 import icco from "../../public/images/icco.png"
 import Smallcomps from '../smallcomps/Smallcomps'
 import Crousel2 from '../smallcomps/crousel2'
+import { useState } from 'react'
 
 function About() {
-
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   let box = [
     {
       pic: Group,
@@ -82,9 +83,11 @@ function About() {
       </p>
       </div>
     </div>
-    <div className="top-right">
-       <img src={storypic} />
-    </div>
+    {viewportWidth > 768 && (
+          <div className="top-right">
+            <img src={storypic} />
+          </div>
+        )}
    </div>
    <div className="mid1">
       {
