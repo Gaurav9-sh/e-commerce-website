@@ -74,7 +74,7 @@ const App = () => {
       ]
     },
     {
-      path:"/more/:category",
+      path:"/:category",
       element:<Layout2/>,
     },
     {

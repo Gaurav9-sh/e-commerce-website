@@ -14,31 +14,31 @@ const Sidebar = () => {
     <>
       <div className="sidepannel sidepannel-hidden">
         <div className="barList">
-          <Link to="/more/WomenFashion" className="sidelink">
+          <Link to="/WomenFashion" className="sidelink">
             <div className="barListitem">Women's Fashion</div>
           </Link>
-          <Link className="item-link" to="/more/MenFashion">
+          <Link className="item-link" to="/MenFashion">
             <div className="barListitem">Men's Fashion</div>
           </Link>
-          <Link className="item-link" to="/more/electronics">
+          <Link className="item-link" to="/electronics">
             <div className="barListitem">Electronics</div>
           </Link>
-          <Link className="item-link" to="/more/Lifestyles">
+          <Link className="item-link" to="/Lifestyles">
             <div className="barListitem">Home & Lifestyle</div>
           </Link>
-          <Link className="item-link" to="/more/Medicines">
+          <Link className="item-link" to="/Medicines">
             <div className="barListitem">Medicine</div>
           </Link>
-          <Link className="item-link" to="/more/Sports&Outdoor">
+          <Link className="item-link" to="/Sports&Outdoor">
             <div className="barListitem">Sports & Outdoor</div>
           </Link>
-          <Link className="item-link" to="/more/Baby&Toy's">
+          <Link className="item-link" to="/Baby&Toy's">
             <div className="barListitem"> Baby's & Toys</div>
           </Link>
-          <Link className="item-link" to="/more/Groceries&Pets">
+          <Link className="item-link" to="/Groceries&Pets">
             <div className="barListitem">Groceries & Pets</div>
           </Link>
-          <Link className="item-link" to="/more/Health&Beauty">
+          <Link className="item-link" to="/Health&Beauty">
             <div className="barListitem">Health & Beauty</div>
           </Link>
         </div>
@@ -51,31 +51,31 @@ const Sidebar = () => {
           <Offcanvas.Body>
             <div className="sidepannel">
               <div className="barList">
-                <Link to="/more/WomenFashion" className="sidelink">
+                <Link to="/WomenFashion" className="sidelink">
                   <div className="barListitem">Women's Fashion</div>
                 </Link>
-                <Link className="item-link" to="/more/MenFashion">
+                <Link className="item-link" to="/MenFashion">
                   <div className="barListitem">Men's Fashion</div>
                 </Link>
-                <Link className="item-link" to="/more/electronics">
+                <Link className="item-link" to="/electronics">
                   <div className="barListitem">Electronics</div>
                 </Link>
-                <Link className="item-link" to="/more/Lifestyles">
+                <Link className="item-link" to="/Lifestyles">
                   <div className="barListitem">Home & Lifestyle</div>
                 </Link>
-                <Link className="item-link" to="/more/Medicines">
+                <Link className="item-link" to="/Medicines">
                   <div className="barListitem">Medicine</div>
                 </Link>
-                <Link className="item-link" to="/more/Sports&Outdoor">
+                <Link className="item-link" to="/Sports&Outdoor">
                   <div className="barListitem">Sports & Outdoor</div>
                 </Link>
-                <Link className="item-link" to="/more/Baby&Toy's">
+                <Link className="item-link" to="/Baby&Toy's">
                   <div className="barListitem"> Baby's & Toys</div>
                 </Link>
-                <Link className="item-link" to="/more/Groceries&Pets">
+                <Link className="item-link" to="/Groceries&Pets">
                   <div className="barListitem">Groceries & Pets</div>
                 </Link>
-                <Link className="item-link" to="/more/Health&Beauty">
+                <Link className="item-link" to="/Health&Beauty">
                   <div className="barListitem">Health & Beauty</div>
                 </Link>
               </div>

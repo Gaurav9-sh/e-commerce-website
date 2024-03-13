@@ -59,11 +59,11 @@ function Product() {
             if (isInWishlist) {
               // Remove item from wishlist
               await axios.delete(
-                `http://localhost:3000/api/wishlist/${userId}/${id}`
+                `https://e-commerce-backend-opis.onrender.com/api/wishlist/${userId}/${id}`
               );
             } else {
               // Add item to wishlist
-              await axios.post("http://localhost:3000/api/wishlist", {
+              await axios.post("https://e-commerce-backend-opis.onrender.com/api/wishlist", {
                 userId,
                 id,
                 image: product.image,
@@ -89,7 +89,7 @@ function Product() {
           const userId = decodedToken._id;
           dispatch(addToCart({ id, title,price,image, userId}))
     
-          const response = await axios.post('http://localhost:3000/Cart', {
+          const response = await axios.post('https://e-commerce-backend-opis.onrender.com/Cart', {
             userId,
             image,
             id,
