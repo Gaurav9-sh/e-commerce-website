@@ -30,7 +30,7 @@ function Checkout() {
 
   const applyCoupon = async () => {
     try{
-       const response = await axios.get(`http://localhost:3000/api/applycoupon?couponCode=${couponCode}`)
+       const response = await axios.get(`https://e-commerce-backend-opis.onrender.com/api/applycoupon?couponCode=${couponCode}`)
        const discount = response.data.discount;
        setDiscount(discount);
     }
