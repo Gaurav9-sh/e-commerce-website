@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import HomePage from './components/HomePage'
 import './App.css'
@@ -15,11 +15,16 @@ import User from './components/UserProfile'
 import Logout from './components/Logout'
 import Checkout from './components/Checkout'
 import Wishlist from './components/Wishlist'
-
+import { Grid } from 'react-loader-spinner';
 
 
 const App = () => {
-  
+  const[loading,setLoading] = useState(true)
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    },2000)
+  },[])
   const router = createBrowserRouter([
    
     {
@@ -86,7 +91,19 @@ const App = () => {
   
   return (
    <>
-     <RouterProvider router={router}/>
+     {
+      loading ? (
+        <div style={{ position: 'relative', height: '100vh' }}>
+        <Grid visible={true}
+          height="80"
+          width="80"
+          color="#DB4444"
+          ariaLabel="grid-loading"
+          radius="12.5"
+     wrapperStyle={{ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)"}}
+          wrapperClass="grid-wrapper" /></div>
+      ) : (<RouterProvider router={router}/>)
+     }
    </>
   )
 }

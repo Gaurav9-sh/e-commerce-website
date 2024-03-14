@@ -15,19 +15,19 @@ const Category = () => {
         <h1 className="heading1">Browse By Category</h1>
       </div>
       <div className="boxCategory">
-        <Link to="/more/Phones">
+        <Link to="/Phones">
           <Box image={Cellphone} />
         </Link>
-        <Link to="/more/Computers">
+        <Link to="/Computers">
           <Box image={Computer} />
         </Link>
-        <Link to="/more/Headphones">
+        <Link to="/Headphones">
           <Box image={Headphone} />
         </Link>
-        <Link to="/more/Camera">
+        <Link to="/Camera">
           <Box image={Camera} />
         </Link>
-        <Link to="/more/Gamepad">
+        <Link to="/Gamepad">
           <Box image={Gamepad} />
         </Link>
       </div>

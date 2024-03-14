@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./BestSelling.css";
 import Card from "./Card";
 import axios from "axios";
-// import Products from './Data'
+import {Grid } from 'react-loader-spinner'
 
 const BestSelling = () => {
   const [Products, setProducts] = useState([]);
-
+  const[loading,setLoading] = useState(true)
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
