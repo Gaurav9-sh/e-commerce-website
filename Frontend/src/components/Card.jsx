@@ -14,6 +14,7 @@ const Card = (props) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
+
   const handleAddToCart = async () => {
     setClicked(true)
     if (token) {
@@ -29,6 +30,7 @@ const Card = (props) => {
         title,
         price,
       });
+      console.log("this is item id",id)
       toast.success("Item added to cart", {
         position: "top-right",
         autoClose: 2000, // Close the notification after 2000ms (2 seconds)

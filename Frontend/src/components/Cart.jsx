@@ -59,8 +59,10 @@ const Cart = () => {
   };
   const removeToCartThunk = (userId, itemId) => async (dispatch) => {
     try {
+      console.log("This is user id",userId)
+      console.log("This is itemid", itemId)
       const response = await axios.delete(`https://e-commerce-backend-opis.onrender.com/api/cartitems/${userId}/${itemId}`);
-
+      console.log(response)
       dispatch(removeToCart(itemId))
       setUserCartItems((prevItems) => prevItems.filter(item => item.id !== itemId));
       toast.info('Item Removed from the cart', {
@@ -72,6 +74,7 @@ const Cart = () => {
         draggable: true,
         progress: undefined,
       });
+
     } catch (error) {
       console.error('Error removing item from cart:', error);
     }

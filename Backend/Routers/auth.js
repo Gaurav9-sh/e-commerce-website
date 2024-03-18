@@ -75,7 +75,7 @@ router.post('/login', async (req, res) => {
 
 router.post('/Cart', async ( req, res) => {
     try{
-        const { userId, id, title, price, image} = req.body;
+        const { userId, image,id, title, price} = req.body;
 
         const user = await User.findById(userId);
 

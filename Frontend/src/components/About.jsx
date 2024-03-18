@@ -2,8 +2,8 @@ import React from 'react'
 import "./About.css"
 import storypic from '../../public/images/storypic.png'
 import shoppingbag from "../../public/images/shoppingbag.png"
-import iconSale from "../../public/images/IconSale.png"
-import delivery from "../../public/images/icondelivery.jpg"
+import iconSale from "../../public/images/Icon-Sale.png"
+import delivery from "../../public/images/icon-delivery.png"
 import Group from "../../public/images/Group.png"
 import bagg from "../../public/images/bagg.png"
 import shield from "../../public/images/shield.png"
