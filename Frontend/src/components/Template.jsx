@@ -43,7 +43,7 @@ const Template = () => {
             color="#DB4444"
             ariaLabel="grid-loading"
             radius="12.5"
-       wrapperStyle={{ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)"}}
+       wrapperStyle={{ top: "50%", left: "50%", transform: "translate(-50%, -50%)"}}
             wrapperClass="grid-wrapper" />
         </div>) : (
           
