@@ -52,7 +52,7 @@ const Wishlist = () => {
             <div className="wishlist-items">
               {wishlistItems.map((item) => (
                 <div className="wishlist-item" key={item.id}>
-                  <Card image={item.image} title={item.title} price={item.price} />
+                  <Card  id={item.id} image={item.image} title={item.title} price={item.price} />
                 </div>
               ))}
             </div>

@@ -18,9 +18,9 @@ const SearchResult = () => {
       }
     };
 
-    fetchData(); // Initial fetch
+    fetchData(); 
 
-    // If searchQuery changes, fetch data again
+   
     if (searchQuery) {
       fetchData();
     }
