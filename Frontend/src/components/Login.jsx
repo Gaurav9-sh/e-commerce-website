@@ -30,8 +30,12 @@ const Login = () => {
     console.log(clicked)
     try {
       const response = await axios.post('https://e-commerce-backend-opis.onrender.com/login', user);
-
+      console.log(response)
       if (response.status === 200) {
+       if(response.status.specialCode)
+       {
+        console.log("code is received")
+       }
        localStorage.setItem('token', response.data.token)
        toast.success('login successfully', {
           position: 'top-right',
@@ -47,7 +51,7 @@ const Login = () => {
         navigate('/')
        },500)
       } 
-      console.log(response.status);
+     
     } catch (err) {
       setClicked(false)
       toast.error('Wrong credentials', {

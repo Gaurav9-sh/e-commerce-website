@@ -16,6 +16,7 @@ import Logout from './components/Logout'
 import Checkout from './components/Checkout'
 import Wishlist from './components/Wishlist'
 import { Grid } from 'react-loader-spinner';
+import AdminHome from './components/Admin/AdminHome'
 
 
 const App = () => {
@@ -86,6 +87,10 @@ const App = () => {
       path:"search",
       element:<Layout3/>
     },
+    {
+      path:"/admin",
+      element:<AdminHome/>
+    }
     
   ])
   

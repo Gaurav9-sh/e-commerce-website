@@ -44,20 +44,29 @@ router.post('/register', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     const { name, password } = req.body;
+    console.log("name is: ",name)
 
     try {
         let token;
         const check = await User.findOne({ name: name })
 
         if (check) {
+
             const isMatch = await bcrypt.compare(password, check.password)
 
             token = await check.generateAuthToken();
 
             if (isMatch) {
 
-                res.status(200).json({ message: "Login successfully", token:token })
-
+                if( name === "admin")
+                {   
+                    console.log("he comes here")
+                    res.status(200).json({message: "Admin login successfully", token:token, specialCode:911})
+                }
+                else{
+                    console.log("i am ultra rich")
+                    res.status(200).json({ message: "Login successfully", token:token })
+                }
             }
             else {
                 res.status(401).json({ error: "Invalid details" })
