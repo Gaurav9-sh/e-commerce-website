@@ -2,18 +2,12 @@ const dotenv = require("dotenv");
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-// const Razorpay = require("razorpay");
+
 
 const app = express();
 app.use(express.json());
 app.use(cors())
 dotenv.config({path: './Config.env'})
-
-
-//  var instance = new Razorpay({
-//   key_id: process.env.key_id,
-//   key_secret: process.env.key_secret,
-// });
 
 const PORT = process.env.PORT
 require('./Database/connection')
